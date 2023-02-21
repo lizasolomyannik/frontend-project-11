@@ -1,6 +1,5 @@
 import HtmlWebpackPlugin from 'html-webpack-plugin';
-
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 
 export default {
   mode: process.env.NODE_ENV || 'development',
@@ -16,10 +15,10 @@ export default {
           },
         },
       },
-      { test: /\.css$/, use: [MiniCssExtractPlugin.loader, 'style-loader', 'css-loader', 'postcss-loader'] },
+      { test: /\.css$/, use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader'] },
       {
         test: /\.scss$/,
-        use: [MiniCssExtractPlugin.loader, 'style-loader', 'css-loader', 'sass-loader', 'postcss-loader'],
+        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader', 'postcss-loader'],
       },
       {
         test: /\.woff2?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
