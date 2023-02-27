@@ -7,6 +7,7 @@ export default class Example {
 
   init() {
     this.element.textContent = 'hello, world!';
+    // eslint-disable-next-line no-console
     console.log('ehu!');
   }
 }
